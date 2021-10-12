@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap"
+		rel="stylesheet">
+	
+
+		
+
+		<link rel="modulepreload" href="/_app/start-be886442.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-e9841fe8.js">
+		<link rel="modulepreload" href="/_app/chunks/singletons-12a22614.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-caec5cff.js">
+		<link rel="modulepreload" href="/_app/pages/about.svelte-85198dc2.js">
+		<link rel="stylesheet" href="/_app/assets/start-464e9d0a.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-4e90f9ca.css">
+
+		<script type="module">
+			import { start } from "/_app/start-be886442.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-caec5cff.js"),
+						import("/_app/pages/about.svelte-85198dc2.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/about",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+</head>
+
+<body>
+	<div id="svelte">
+
+
+<div class="w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 m-auto mt-10 flex flex-col gap-10 mb-24"><nav class="flex items-center justify-between"><div><h3 class="text-xl">Mi blog</h3></div>
+  <div class="flex gap-6"><a href="/" class="svelte-1ygpo0s">Inicio
+</a>
+    <a href="/about" class="svelte-1ygpo0s">Acerca de
+</a></div></nav>
+  </div>
+
+
+
+			
+		</div>
+</body>
+
+</html>
