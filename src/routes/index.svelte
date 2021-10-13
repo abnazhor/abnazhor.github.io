@@ -1,7 +1,9 @@
 <script>
   import PublicationCard from "$lib/components/PublicationCard.svelte";
   import LatestPublicationCard from "$lib/components/LatestPublicationCard.svelte";
+
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
 
   let posts = [];
   let backupPosts = [];
@@ -55,10 +57,13 @@
   });
 </script>
 
-<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-10" transition:fade={{duration: 50}}>
   {#if (arePostsContentLoaded && posts.length) || !isSearchModeOff}
     {#if isSearchModeOff}
-      <LatestPublicationCard {...posts[0]} />
+      <div transition:fade={{ duration: 50 }}>
+        <h1 class="text-2xl py-2">Lo más nuevo</h1>
+        <LatestPublicationCard {...posts[0]} />
+      </div>
     {/if}
     <div class="flex flex-col gap-4">
       <div
@@ -92,7 +97,9 @@
         {#if posts.length > 0}
           {#each posts as post, index}
             {#if (index && index < 10) || !isSearchModeOff}
-              <PublicationCard {...post} inverted={index % 2} />
+              <div transition:fade={{ duration: 100 }}>
+                <PublicationCard {...post} inverted={index % 2} />
+              </div>
             {/if}
           {/each}
         {:else}
@@ -100,9 +107,10 @@
             id="aligner"
             class="flex items-center justify-center flex-col gap-7"
           >
-            <img src="/img/not-found.png" alt="" class="h-72 mr-10" />
-            <span class="text-2xl font-light"
-              >Nuestros gatos no pudieron encontrar coincidencias, prueba de nuevo.</span
+            <img src="/img/not-found.png" alt="" class="w-9/12 xl:w-4/12" />
+            <span class="text-2xl font-light text-center"
+              >Nuestros gatos no pudieron encontrar coincidencias, prueba de
+              nuevo.</span
             >
           </div>
         {/if}
@@ -114,17 +122,17 @@
     </div>
   {:else}
     <div id="aligner" class="flex items-center justify-center flex-col gap-7">
-      <img src="/img/empty-blog.png" alt="" class="h-96 mr-10" />
+      <img
+        src="/img/empty-blog.png"
+        alt=""
+        class="w-9/12 xl:w-4/12 mr-5 xl:mr-10"
+      />
       <span class="text-2xl font-light">Esto está vacío, al parecer.</span>
     </div>
   {/if}
 </div>
 
 <style>
-  :root {
-    @apply bg-gray-50;
-  }
-
   #aligner {
     height: 80vh;
   }

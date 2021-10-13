@@ -22,6 +22,11 @@
     @apply bg-gray-900 rounded-md p-5;
 }
 
+.post-information img {
+    max-height: 500px;
+    @apply block m-auto;
+}
+
 code {
     font-family: 'Nunito', sans-serif;
 }

@@ -8,6 +8,7 @@
   import "$lib/code-style.css";
 
   const converter = new showdown.Converter();
+  converter.setFlavor("github");
 
   const params = $page.params;
 
@@ -23,11 +24,15 @@
 
     selectedPost = postIndex.find((post) => post.id === params.postId);
 
-    const mdContent = await fetch(selectedPost.contentRoute).then((res) =>
-      res.text()
-    );
+    try {
+      const mdContent = await fetch(selectedPost.contentRoute).then((res) =>
+        res.text()
+      );
 
-    selectedPost.content = converter.makeHtml(mdContent);
+      selectedPost.content = converter.makeHtml(mdContent);
+    } catch (err) {
+      window.location.href = "/";
+    }
 
     estimatedReadingTime = calculateEstimatedReadingTime(selectedPost.content);
 
@@ -37,21 +42,29 @@
       });
     });
 
-    mutationObserver.observe(document.querySelector("#post-information"), {childList: true});
+    mutationObserver.observe(document.querySelector("#post-information"), {
+      childList: true,
+    });
 
     finishedLoading = true;
   });
 </script>
 
 {#if finishedLoading}
-  <div class="flex items-center flex-col">
+  <div class="flex items-center flex-col mb-4">
     <h1 class="text-2xl text-center">{selectedPost.title}</h1>
     <span class="text-gray-700"
-      >Por Jorge - {estimatedReadingTime}
-      {estimatedReadingTime > 1 ? "minutos" : "minuto"} de lectura</span
-    >
+      >Por Jorge
+      {#if estimatedReadingTime > 0}-
+        {estimatedReadingTime}
+        {estimatedReadingTime > 1 ? "minutos" : "minuto"} de lectura
+      {/if}
+    </span>
   </div>
 {/if}
-<div class="post-information" id="post-information">
+<div
+  class="post-information"
+  id="post-information"
+>
   {@html selectedPost.content}
 </div>
