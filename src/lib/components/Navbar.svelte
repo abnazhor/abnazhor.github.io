@@ -1,13 +1,24 @@
 <script>
   import NavLink from "./NavLink.svelte";
+
+  import { onMount } from "svelte";
+
+  let isLocalhost = false;
+
+  onMount(() => {
+    isLocalhost = window.location.hostname === "localhost";
+  });
 </script>
 
 <nav class="flex items-center justify-between">
   <div>
-      <h3 class="text-xl">Mi blog</h3>
+    <h3 class="text-xl">Mi blog</h3>
   </div>
-  <div class="flex gap-6">
+  <div class="flex gap-6 items-center">
     <NavLink href="/">Inicio</NavLink>
     <NavLink href="/about">Acerca de</NavLink>
+    {#if isLocalhost}
+      <a href="/publisher" class="font-bold text-green-900">Nueva publicación</a>
+    {/if}
   </div>
 </nav>

@@ -1,4 +1,5 @@
 import fs from "fs";
+import { nanoid } from 'nanoid';
 
 const main = () => {
     const baseRoute = "./static/posts";
@@ -9,14 +10,15 @@ const main = () => {
         const postFiles = fs.readdirSync(`${baseRoute}/${folder}`);
 
         const content = postFiles.find(file => file.indexOf(".md") !== -1);
-        const coverImage = postFiles.find(file => file.indexOf("cover") !== -1);
+        const coverImage = postFiles.find(file => /\.(avif|png|jpeg|jpg)/.test(file));
 
         postIndex.push({
-            id: folder,
+            id: nanoid(),
             coverImage: `/posts/${folder}/${coverImage}`,
             contentRoute: `/posts/${folder}/${content}`,
             content: "",
-            title: content.slice(0, content.length-3)
+            title: content.slice(0, content.length-3),
+            createdOn: new Date(folder)
         })
     }
 

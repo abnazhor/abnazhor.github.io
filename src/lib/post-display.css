@@ -1,23 +1,27 @@
-.post-information h1 {
-    @apply text-2xl;
+.post-information {
+    @apply space-y-2;
 }
 
 .post-information h1 {
-    @apply text-2xl;
+    @apply text-2xl font-semibold;
 }
 
-.post-information h1 {
-    @apply text-2xl;
+.post-information h2 {
+    @apply text-xl font-semibold;
 }
 
-.post-information h1 {
-    @apply text-2xl;
+.post-information h3 {
+    @apply text-lg font-semibold;
 }
 
-.post-information h1 {
-    @apply text-2xl;
+.post-information p {
+    @apply text-lg text-justify;
 }
 
-.post-information h1 {
-    @apply text-2xl;
+.post-information pre {
+    @apply bg-gray-900 rounded-md p-5;
+}
+
+code {
+    font-family: 'Nunito', sans-serif;
 }

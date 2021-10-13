@@ -9,6 +9,6 @@
 
 <style>
     .selected {
-        @apply bg-green-200;
+        @apply font-bold;
     }
 </style>

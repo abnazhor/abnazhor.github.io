@@ -4,50 +4,118 @@
   import { onMount } from "svelte";
 
   let posts = [];
+  let backupPosts = [];
+
+  let isSearchModeOff = true;
+  let arePostsContentLoaded = false;
+
+  let searchText = "";
+  let latestSearchTextFiltered = "";
+
+  const filterByText = (post) =>
+    post.title.toLowerCase().includes(searchText.toLowerCase()) ||
+    post.content.toLowerCase().includes(searchText.toLowerCase());
+
+  const searchPosts = async (text) => {
+    let result = [];
+
+    if (!text) {
+      result = backupPosts;
+    } else {
+      if (posts.length && latestSearchTextFiltered.length < searchText.length) {
+        result = posts.filter(filterByText);
+      } else {
+        result = backupPosts.filter(filterByText);
+      }
+    }
+
+    latestSearchTextFiltered = text;
+
+    return result;
+  };
+
+  $: isSearchModeOff = !searchText;
+  $: searchPosts(searchText).then((res) => {
+    posts = res;
+  });
 
   onMount(async () => {
     posts = await fetch("/post-index.json").then((res) => res.json());
+    posts = posts.reverse();
 
     for (const [index, post] of Object.entries(posts)) {
       posts[index].content = await fetch(post.contentRoute).then((res) =>
         res.text()
       );
     }
+
+    Object.assign(backupPosts, posts);
+
+    arePostsContentLoaded = true;
   });
 </script>
 
 <div class="flex flex-col gap-10">
-  {#if posts.length !== 0}
-    <LatestPublicationCard {...posts[0]} />
+  {#if (arePostsContentLoaded && posts.length) || !isSearchModeOff}
+    {#if isSearchModeOff}
+      <LatestPublicationCard {...posts[0]} />
+    {/if}
     <div class="flex flex-col gap-4">
-      <div class="rounded-md flex justify-between">
+      <div
+        class="rounded-md flex justify-between flex-col md:flex-row gap-2"
+        class:md:flex-col={!isSearchModeOff}
+      >
         <div class="relative">
           <input
             type="text"
             class="border rounded-md p-3 border-gray-300 w-full pr-10"
             placeholder="Buscar publicación..."
+            bind:value={searchText}
           />
           <i
             class="ri-search-line absolute block right-3 top-1 text-lg text-gray-700 mt-1.5"
           />
         </div>
-        <select
-          name=""
-          id=""
-          class="border p-3 rounded-md w-40 border-gray-300"
-        >
-          <option value="">Más recientes</option>
-          <option value="">Destacados</option>
-          <option value="">Más populares</option>
-        </select>
+        {#if isSearchModeOff}
+          <select
+            name=""
+            id=""
+            class="border p-3 rounded-md border-gray-300 pr-10"
+          >
+            <option value="">Más recientes</option>
+            <!--<option value="">Destacados</option>
+            <option value="">Más populares</option>-->
+          </select>
+        {/if}
       </div>
-      <div class="flex flex-col gap-10">
-        {#each posts as post, index}
-          {#if index && index < 10}
-            <PublicationCard {...post} inverted={index % 2} />
-          {/if}
-        {/each}
+      <div class="flex flex-col gap-3 xl:gap-10">
+        {#if posts.length > 0}
+          {#each posts as post, index}
+            {#if (index && index < 10) || !isSearchModeOff}
+              <PublicationCard {...post} inverted={index % 2} />
+            {/if}
+          {/each}
+        {:else}
+          <div
+            id="aligner"
+            class="flex items-center justify-center flex-col gap-7"
+          >
+            <img src="/img/not-found.png" alt="" class="h-72 mr-10" />
+            <span class="text-2xl font-light"
+              >Nuestros gatos no pudieron encontrar coincidencias, prueba de nuevo.</span
+            >
+          </div>
+        {/if}
       </div>
+    </div>
+  {:else if !arePostsContentLoaded}
+    <div id="aligner" class="flex items-center justify-center flex-col gap-7">
+      <span class="text-2xl font-light">Cargando...</span>
+    </div>
+  {:else}
+    <div id="aligner" class="flex items-center justify-center flex-col gap-7">
+      <img src="/img/empty-blog.png" alt="" class="h-96 mr-10" />
+      <span class="text-2xl font-light">Esto está vacío, al parecer.</span>
     </div>
   {/if}
 </div>
@@ -55,5 +123,9 @@
 <style>
   :root {
     @apply bg-gray-50;
+  }
+
+  #aligner {
+    height: 80vh;
   }
 </style>

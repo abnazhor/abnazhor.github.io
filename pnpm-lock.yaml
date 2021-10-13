@@ -8,6 +8,8 @@ specifiers:
   cssnano: ^5.0.8
   eslint: ^8.0.0
   eslint-plugin-svelte3: ^3.2.1
+  highlight.js: ^11.2.0
+  nanoid: ^3.1.29
   postcss: ^8.3.9
   postcss-load-config: ^3.1.0
   remixicon: ^2.5.0
@@ -19,6 +21,8 @@ specifiers:
 dependencies:
   '@sveltejs/adapter-static': 1.0.0-next.21
   '@tailwindcss/forms': 0.3.4_tailwindcss@2.2.16
+  highlight.js: 11.2.0
+  nanoid: 3.1.29
   remixicon: 2.5.0
   showdown: 1.9.1
 
@@ -1181,6 +1185,11 @@ packages:
     resolution: {integrity: sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==}
     dev: true
 
+  /highlight.js/11.2.0:
+    resolution: {integrity: sha512-JOySjtOEcyG8s4MLR2MNbLUyaXqUunmSnL2kdV/KuGJOmHZuAR5xC54Ko7goAXBWNhf09Vy3B+U7vR62UZ/0iw==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
   /hsl-regex/1.0.0:
     resolution: {integrity: sha1-1JMwx4ntgZ4nakwNJy3/owsY/m4=}
     dev: true
@@ -1472,7 +1481,6 @@ packages:
     resolution: {integrity: sha512-dW2pUSGZ8ZnCFIlBIA31SV8huOGCHb6OwzVCc7A69rb/a+SgPBwfmLvK5TKQ3INPbRkcI8a/Owo0XbiTNH19wg==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
