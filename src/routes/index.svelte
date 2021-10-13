@@ -57,7 +57,11 @@
   });
 </script>
 
-<div class="flex flex-col gap-10" transition:fade={{duration: 50}}>
+<svelte:head>
+  <title>Abnazhor - Inicio</title>
+</svelte:head>
+
+<div class="flex flex-col gap-10" transition:fade={{ duration: 50 }}>
   {#if (arePostsContentLoaded && posts.length) || !isSearchModeOff}
     {#if isSearchModeOff}
       <div transition:fade={{ duration: 50 }}>
@@ -78,7 +82,11 @@
             bind:value={searchText}
           />
           <i
-            class="ri-search-line absolute block right-3 top-1 text-lg text-gray-700 mt-1.5"
+            class="absolute block right-3 top-1 text-lg text-gray-700 mt-1.5"
+            class:ri-search-line={!searchText}
+            class:cursor-pointer={searchText}
+            class:ri-close-line={searchText}
+            on:click={() => searchText ? searchText = "" : ""}
           />
         </div>
         {#if isSearchModeOff}

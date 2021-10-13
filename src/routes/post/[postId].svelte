@@ -50,6 +50,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Abnazhor - {selectedPost.title}</title>
+</svelte:head>
+
 {#if finishedLoading}
   <div class="flex items-center flex-col mb-4">
     <h1 class="text-2xl text-center">{selectedPost.title}</h1>
