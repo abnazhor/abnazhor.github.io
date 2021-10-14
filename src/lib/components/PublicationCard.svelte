@@ -37,7 +37,7 @@
         src="https://avatars.githubusercontent.com/u/11428398?v=4"
         alt=""
         loading="lazy"
-        class="rounded-full w-12"
+        class="rounded-full w-12 h-12"
       />
       <div class="flex flex-col">
         <span class="font-semibold">Publicado por Jorge</span>
