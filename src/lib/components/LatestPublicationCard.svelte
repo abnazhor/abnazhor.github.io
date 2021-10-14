@@ -37,7 +37,7 @@
     on:click={() => goto(`/post/${id}`)}
   >
     <h1 class="text-2xl font-bold text-white">{title}</h1>
-    <h2 class="text-lg text-gray-200 w-7/12 text-justify">
+    <h2 class="text-lg text-gray-200 w-full xl:w-7/12 text-justify">
       {content
         .replace(/\#{1,3}.+\n/, "")
         .replace(/(<([^>]+)>)/gi, "")
