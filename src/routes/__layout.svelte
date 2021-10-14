@@ -1,6 +1,5 @@
 <script>
   import "../app.css";
-  import "remixicon/fonts/remixicon.css";
 
   import Navbar from "$lib/components/Navbar.svelte";
 
