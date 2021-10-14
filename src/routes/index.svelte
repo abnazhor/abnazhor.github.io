@@ -64,7 +64,7 @@
 <div class="flex flex-col gap-10" transition:fade={{ duration: 50 }}>
   {#if (arePostsContentLoaded && posts.length) || !isSearchModeOff}
     {#if isSearchModeOff}
-      <div transition:fade={{ duration: 50 }}>
+      <div transition:fade={{ duration: 70 }}>
         <h1 class="text-2xl py-2">Lo más nuevo</h1>
         <LatestPublicationCard {...posts[0]} />
       </div>
@@ -82,10 +82,12 @@
             bind:value={searchText}
           />
           <i
-            class="absolute block right-3 top-1 text-lg text-gray-700 mt-1.5"
+            class="absolute block right-3 top-1 text-lg text-gray-700 mt-1.5 transition-all"
             class:ri-search-line={!searchText}
             class:cursor-pointer={searchText}
+            class:text-xl={searchText}
             class:ri-close-line={searchText}
+            class:hover:text-red-600={searchText}
             on:click={() => searchText ? searchText = "" : ""}
           />
         </div>
@@ -116,7 +118,7 @@
             class="flex items-center justify-center flex-col gap-7"
           >
             <img src="/img/not-found.png" alt="" class="w-9/12 xl:w-4/12" />
-            <span class="text-2xl font-light text-center"
+            <span class="text-xl font-light text-center"
               >Nuestros gatos no pudieron encontrar coincidencias, prueba de
               nuevo.</span
             >
@@ -135,13 +137,13 @@
         alt=""
         class="w-9/12 xl:w-4/12 mr-5 xl:mr-10"
       />
-      <span class="text-2xl font-light">Esto está vacío, al parecer.</span>
+      <span class="text-xl font-light">Esto está vacío, al parecer.</span>
     </div>
   {/if}
 </div>
 
 <style>
   #aligner {
-    height: 80vh;
+    height: 60vh;
   }
 </style>

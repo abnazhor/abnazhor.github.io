@@ -3,7 +3,7 @@
     export let selected = false;
 </script>
 
-<a {href} class:selected={selected}>
+<a class="md:text-lg font-semibold" {href} class:selected={selected}>
     <slot></slot>
 </a>
 

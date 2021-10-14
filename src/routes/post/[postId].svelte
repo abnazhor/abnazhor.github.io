@@ -12,7 +12,9 @@
 
   const params = $page.params;
 
-  let selectedPost = {};
+  let selectedPost = {
+    content: "",
+  };
   let finishedLoading = false;
   let estimatedReadingTime = 0;
 
@@ -55,9 +57,11 @@
 </svelte:head>
 
 {#if finishedLoading}
-  <div class="flex items-center flex-col mb-4">
-    <h1 class="text-2xl text-center">{selectedPost.title}</h1>
-    <span class="text-gray-700"
+  <div class="flex flex-col mb-7">
+    <h1 class="text-xl font-semibold md:font-normal md:text-3xl">
+      {selectedPost.title}
+    </h1>
+    <span class="text-gray-700 text-lg"
       >Por Jorge
       {#if estimatedReadingTime > 0}-
         {estimatedReadingTime}
@@ -66,9 +70,23 @@
     </span>
   </div>
 {/if}
-<div
-  class="post-information"
-  id="post-information"
->
+<div class="post-information" id="post-information">
   {@html selectedPost.content}
 </div>
+{#if finishedLoading && !selectedPost.content}
+  <div id="aligner" class="flex items-center justify-center flex-col gap-7">
+    <img
+      src="/img/empty-blog.png"
+      alt=""
+      loading="lazy"
+      class="w-9/12 xl:w-4/12 mr-5 xl:mr-10"
+    />
+    <span class="text-xl font-light">Esto está vacío, al parecer.</span>
+  </div>
+{/if}
+
+<style>
+  #aligner {
+    height: 60vh;
+  }
+</style>

@@ -3,28 +3,37 @@
 }
 
 .post-information h1 {
-    @apply text-2xl font-semibold;
+    @apply text-xl md:text-2xl font-semibold;
 }
 
 .post-information h2 {
-    @apply text-xl font-semibold;
+    @apply text-lg md:text-xl font-bold;
 }
 
 .post-information h3 {
-    @apply text-lg font-semibold;
+    @apply md:text-lg font-semibold;
 }
 
 .post-information p {
-    @apply text-lg text-justify;
+    @apply text-lg text-justify mb-5 !important;
 }
 
 .post-information pre {
-    @apply bg-gray-900 rounded-md p-5;
+    @apply bg-gray-900 rounded-md p-5 mb-5 !important;
 }
 
 .post-information img {
     max-height: 500px;
-    @apply block m-auto;
+    @apply block m-auto rounded-md shadow-md;
+}
+
+.post-information a {
+    max-height: 500px;
+    @apply font-bold text-green-900;
+}
+
+.post-information blockquote p {
+    @apply border-l-2 border-gray-700 bg-gray-200 rounded-md p-4 flex items-center pl-6 pr-7 shadow-sm italic;
 }
 
 code {
