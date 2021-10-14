@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "node build-posts.js && svelte-kit dev --host",
-    "build": "node build-posts.js && svelte-kit build && touch ./docs/.nojekyll",
+    "build": "node build-posts.js && svelte-kit build && touch ./docs/.nojekyll && echo 'abnazhor.com' > docs/CNAME",
     "preview": "svelte-kit preview",
     "lint": "eslint --ignore-path .gitignore ."
   },
