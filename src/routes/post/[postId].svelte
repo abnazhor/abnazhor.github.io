@@ -57,7 +57,7 @@
 </svelte:head>
 
 {#if finishedLoading}
-  <div class="flex flex-col mb-7">
+  <div class="flex flex-col mb-7 w-11/12 m-auto md:w-full">
     <h1 class="text-xl font-semibold md:font-normal md:text-3xl">
       {selectedPost.title}
     </h1>
@@ -70,7 +70,7 @@
     </span>
   </div>
 {/if}
-<div class="post-information" id="post-information">
+<div class="post-information w-11/12 md:w-full m-auto" id="post-information">
   {@html selectedPost.content}
 </div>
 {#if finishedLoading && !selectedPost.content}

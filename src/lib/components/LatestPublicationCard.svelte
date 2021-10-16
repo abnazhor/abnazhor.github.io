@@ -24,7 +24,7 @@
   id="parent"
 >
   <div
-    class="w-full rounded-md h-full absolute z-10 bg-cover bg-center shadow-md transition-all duration-1000 delay-75 hover:scale-125"
+    class="w-full rounded-md h-full absolute z-10 bg-cover bg-center shadow-md transition-all duration-700 hover:scale-125"
     style="background-image: url('{coverImage}');"
     id="zoom-child"
   />
