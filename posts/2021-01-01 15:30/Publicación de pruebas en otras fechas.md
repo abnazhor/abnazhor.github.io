@@ -1,0 +1,3 @@
+# Introducción
+
+Esta es otra publicación de prueba. Como puedes observar, hasta que no se haya avanzado un poco más las publicaciones a veces tendrán contenido un tanto extraño y quizás encuentras que no encajan del todo con lo que debería ser. Esto se debe a que el desarrollo de la aplicación tiene prioridad frente al contenido que se genera para el mismo, por lo que de momento es algo bastante habitual ver este tipo de contenidos!
