@@ -1,4 +1,4 @@
-Un jinete se deplazaba a galope por las llanuras de Vadenar. Sus ropajes rojos, compuestos por un uniforme militar con finos bordados dorados y un fino cubrebrisas, se agitaban con el viento proveniente del este. **Pent**, como se hacía llamar ese hombre, se dirigía a ver a su informador al otro lado del  territorio. Tras muchos meses de espera había logrado encontrar a la persona que podría darle pistas sobre dónde continuar sus investigaciones acerca de aquella secta llamada el Signo.
+Un jinete se desplazaba a galope por las llanuras de Vadenar. Sus ropajes rojos, compuestos por un uniforme militar con finos bordados dorados y un fino cubrebrisas, se agitaban con el viento proveniente del este. **Pent**, como se hacía llamar ese hombre, se dirigía a ver a su informador al otro lado del  territorio. Tras muchos meses de espera había logrado encontrar a la persona que podría darle pistas sobre dónde continuar sus investigaciones acerca de aquella secta llamada el Signo.
 
 Desde hacía más de un año su única tarea dentro del ejército había sido investigar acerca de aquella organización que parecía tener las respuestas de los fenómenos que se producían con frecuencia en el país y que progresivamente iban empeorando. —«Al principio solo eran unos cuantos incidentes aislados, ahora es casi cíclico»— no lograba borrar de su mente las imágenes de aquellas bestias metálicas que atacaban sin descanso los pueblos. Ellos los llamaban garrascuras, principalmente por las surcos que dejaban en el terreno al desplazarse.
 
@@ -14,13 +14,13 @@ Las sinuosas formas de algunas rocas coincidían con las descripciones que habí
 
 Parecía desierto, de eso no cabía duda. Sin embargo, si algo le había enseñado su experiencia a lo largo de todo este tiempo es que todo parece tranquilo hasta que ocurre el desastre.
 
-Procedió a desenvainar su hoja de Sívar. El metal comenzó a brillar con el reflejo del sol, revelando lo que solo a la luz del día podía observarse: Suaves vetas de acero y Revar se enroscaban y se retorcían a lo largo de toda la hoja, formando pequeños glifos por toda la espada. —Quiera el mismísimo que no tenga que hacer uso de ella— susurró Pent, sumergido en sus pensamientos.
+Procedió a desenvainar su hoja de Sívar. El metal comenzó a brillar con el reflejo del sol, revelando lo que solo a la luz del día podía observarse: Suaves vetas de acero y Révar se enroscaban y se retorcían a lo largo de toda la hoja, formando pequeños glifos por toda la espada. —Quiera el mismísimo que no tenga que hacer uso de ella— susurró Pent, sumergido en sus pensamientos.
 
 Cuanto más avanzaba, más tensión parecía haber en el ambiente.
 
 Los sonidos metálicos de la ligera cota de malla que portaba era lo único que podía escuchar.
 
-—«Es como aquel día»—. Las imágenes volvieron a su mente, brotando con la fuerza de un torrente en una noche lluviosa. Podía ver con total claridad a aquella bestia moverse por la noche lluviosa. Mirada perforante, formas elegantes y largas garras. Aquellas eran las cualidades que cualquier humano desearía no haber visto: Un garrascura de casi tres metros de altura se alzaba frente a él, mirándolo fijamente. Pequeñas gotas de lluvia resbalaban suavemente por la brillante armadura de aquel ser.
+—«Es como aquel día»—. Las imágenes volvieron a su mente, brotando con la fuerza de un torrente en una noche lluviosa. Podía ver con total claridad a aquella bestia moverse por la noche lluviosa. Mirada penetrante, formas elegantes y largas garras. Aquellas eran las cualidades que cualquier humano desearía no haber visto: Un garrascura de casi tres metros de altura se alzaba frente a él, mirándolo fijamente. Pequeñas gotas de lluvia resbalaban suavemente por la brillante armadura de aquel ser.
 
 Podía escuchar los latidos de su corazón. Latidos metálicos.
 
@@ -36,4 +36,4 @@ De pronto, un suave toque en el hombro lo devolvió al mundo real: Una joven sol
 
 No pudo terminar aquella frase cuando la tierra comenzó a temblar al ritmo de un sonido metálico que se hacía cada vez más y más fuerte. Aquel mismo sonido que había escuchado hacía pocos minutos en su recuerdo.
 
-De pronto, parte de la formación rocosa se hizo añicos y miles de trozos salieron despedidos en todas direcciones. Delante de ellos se alzaba un monstro con apariencia de dragón de al menos cuatro metros.
+De pronto, parte de la formación rocosa se hizo añicos y miles de trozos salieron despedidos en todas direcciones. Delante de ellos se alzaba un monstruo con apariencia de dragón de al menos cuatro metros.
